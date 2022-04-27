@@ -17,7 +17,8 @@ public class NoteService {
     // 这里可以注入spring中管理的其他bean，这也是使用spring来实现多线程的一大优势
 
     // @Async 定义一个线程任务
-    @Async    // 这里进行标注为异步任务，在执行此方法的时候，会单独开启线程来执行
+    // 这里进行标注为异步任务，在执行此方法的时候，会单独开启线程来执行
+    @Async
     public void f1(int i) {
         System.out.println("f1 : "+ i +":" + Thread.currentThread().getName() + "   " + UUID.randomUUID().toString());
         try {
